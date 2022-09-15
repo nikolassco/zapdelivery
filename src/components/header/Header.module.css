@@ -1,0 +1,24 @@
+.container {
+  text-transform: uppercase;
+}
+
+.container p {
+  margin: 7px 0;
+}
+
+.barblue {
+  min-height: 40px;
+  background-color: #d3d3d3;
+}
+
+.info {
+  position: relative;
+  bottom: 35px;
+}
+
+.imgLogo {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}

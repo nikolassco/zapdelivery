@@ -1,0 +1,40 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  background-color: #d3d3d3;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 50px;
+  overflow-x: auto;
+  text-transform: uppercase;
+}
+
+.list::-webkit-scrollbar:horizontal {
+  width: 0;
+}
+
+.item {
+  margin: 0 5px;
+  padding: 0 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  line-height: 50px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.input_search {
+  width: 90vw;
+  margin-top: 15px;
+}
+
+@media (max-width: 760px) {
+  .list {
+    justify-content: flex-start;
+    padding: 0 10px;
+  }
+}
