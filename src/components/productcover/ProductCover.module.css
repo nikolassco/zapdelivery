@@ -1,39 +1,38 @@
 .item {
-  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 170px;
   width: 500px;
   max-width: 90%;
-  margin: 7px 5px 7px 5px;
+  margin: 7px 5px;
   padding: 10px;
   border: 1px solid #d3d3d3;
   border-radius: 4px;
-  color: #000;
-  line-height: 30px;
+  color: var(--color-black);
   cursor: pointer;
   text-decoration: none;
 }
 
 .item:hover {
-  border: 1px solid #000;
-  transform: scale(1.03);
+  border: 2px solid var(--color-black);
 }
 
-.link {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.name,
-.price {
-  font-size: 1.5rem;
+.name {
+  font-size: 1.7rem;
   font-weight: bold;
 }
 
 .description {
   font-style: italic;
+  padding: 0 20px;
 }
 
 .price {
-  color: green;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.price span {
+  color: var(--color-green);
 }

@@ -9,30 +9,29 @@ const Menu = () => {
   return (
     <div className={styles.menu}>
       <h1 className={styles.description} id="promotion">Promoção</h1>
-      {productsList && productsList.filter((i) => i.category === "promotion").map((item) => (
-        <ProductCover key={item.id} id={item.id} itemName={item.itemName} itemDescription={item.itemDescription} itemPrice={item.itemPrice} />
+      {productsList && productsList.filter((i) => i.promotion === true).map((item) => (
+        <ProductCover key={item.id} id={item.id} itemName={item.itemName} itemDescription={item.itemDescription} itemOptionPrice={item.itemOptionPrice} />
+      ))}
+      <h1 className={styles.description} id="burguer">Hambúrguer</h1>
+      {productsList && productsList.filter((i) => i.category === "burguer").map((item) => (
+        <ProductCover key={item.id} id={item.id} itemName={item.itemName} itemDescription={item.itemDescription} itemOptionPrice={item.itemOptionPrice} />
+      ))}
+      <h1 className={styles.description} id="premium">Linha Premium</h1>
+      {productsList && productsList.filter((i) => i.category === "premium").map((item) => (
+        <ProductCover key={item.id} id={item.id} itemName={item.itemName} itemDescription={item.itemDescription} itemOptionPrice={item.itemOptionPrice} />
       ))}
       <h1 className={styles.description} id="acai">Açai</h1>
-      <ProductCover />
-      <ProductCover />
-      <ProductCover />
-      <ProductCover />
+      {productsList && productsList.filter((i) => i.category === "acai").map((item) => (
+        <ProductCover key={item.id} id={item.id} itemName={item.itemName} itemDescription={item.itemDescription} itemOptionPrice={item.itemOptionPrice} />
+      ))}
       <h1 className={styles.description} id="drinks">Bebidas</h1>
-      <ProductCover />
-      <ProductCover />
-      <ProductCover />
-      <ProductCover />
-      <h1 className={styles.description} id="premium">Linha Premium</h1>
-      <ProductCover />
-      <ProductCover />
-      <ProductCover />
-      <ProductCover />
-      <h1 className={styles.description} id="burguer">Hambúrguer</h1>
-      <ProductCover />
+      {productsList && productsList.filter((i) => i.category === "drinks").map((item) => (
+        <ProductCover key={item.id} id={item.id} itemName={item.itemName} itemDescription={item.itemDescription} itemOptionPrice={item.itemOptionPrice} />
+      ))}
       <h1 className={styles.description} id="hotdog">Hot Dog</h1>
-      <ProductCover />
-      <ProductCover />
-      <ProductCover />
+      {productsList && productsList.filter((i) => i.category === "hotdog").map((item) => (
+        <ProductCover key={item.id} id={item.id} itemName={item.itemName} itemDescription={item.itemDescription} itemOptionPrice={item.itemOptionPrice} />
+      ))}
     </div>
   )
 }
