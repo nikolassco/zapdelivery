@@ -1,21 +1,24 @@
+.container {
+  width: 500px;
+  max-width: 90%;
+  margin: 12px 5px;
+}
+
 .item {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   min-height: 170px;
-  width: 500px;
-  max-width: 90%;
-  margin: 7px 5px;
   padding: 10px;
-  border: 1px solid #d3d3d3;
-  border-radius: 4px;
+  border-bottom: 3px solid #d3d3d3;
+  border-radius: 10px;
   color: var(--color-black);
   cursor: pointer;
   text-decoration: none;
 }
 
 .item:hover {
-  border: 2px solid var(--color-black);
+  background-color: #f0f0f5;
 }
 
 .name {

@@ -1,3 +1,14 @@
+:root {
+  font-size: 16px;
+  --color-green: #4caf50;
+  --color-black: #212121;
+  --color-red: #f44336;
+  --color-blue: #2196f3;
+  --color-light-grey: #e9e9e9;
+  --color-grey: #a0a0a0;
+  --box-shadow: 5px 10px var(--color-light-grey);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,15 +19,7 @@
 body {
   background-color: #f8f8ff;
   /* tirar depois */
-  margin-bottom: 500px;
-}
-
-:root {
-  font-size: 16px;
-  --color-green: #4caf50;
-  --color-black: #212121;
-  --color-red: #f44336;
-  --color-blue: #2196f3;
+  margin-bottom: 100px;
 }
 
 a {
@@ -38,5 +41,6 @@ a {
 }
 
 .active {
-  background-color: #999;
+  background-color: var(--color-black);
+  color: var(--color-light-grey);
 }

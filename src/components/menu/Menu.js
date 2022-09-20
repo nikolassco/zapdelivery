@@ -1,13 +1,18 @@
-import React from 'react'
+import React from 'react';
 import styles from "./Menu.module.css";
 import ProductCover from '../productcover/ProductCover';
 import { productsList } from '../../data/products/products';
-
+import { usePedidoContext } from '../../hooks/usePedidoContext';
 // chamar os itens pra preencher category
 
 const Menu = () => {
+  const { searchTerm } = usePedidoContext();
+
   return (
     <div className={styles.menu}>
+      {searchTerm ? productsList.filter((val) => val.itemName.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())).map((item) => (
+        <ProductCover key={item.id} id={item.id} itemName={item.itemName} itemDescription={item.itemDescription} itemOptionPrice={item.itemOptionPrice} />
+      )) : ""}
       <h1 className={styles.description} id="promotion">Promoção</h1>
       {productsList && productsList.filter((i) => i.promotion === true).map((item) => (
         <ProductCover key={item.id} id={item.id} itemName={item.itemName} itemDescription={item.itemDescription} itemOptionPrice={item.itemOptionPrice} />
