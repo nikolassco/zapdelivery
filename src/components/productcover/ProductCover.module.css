@@ -10,7 +10,7 @@
   justify-content: space-evenly;
   min-height: 170px;
   padding: 10px;
-  border-bottom: 3px solid #d3d3d3;
+  border-bottom: 3px solid var(--color-border);
   border-radius: 10px;
   color: var(--color-black);
   cursor: pointer;
