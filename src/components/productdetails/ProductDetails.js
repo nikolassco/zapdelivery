@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { productsList } from "../../data/products/products";
 import styles from "./ProductDetails.module.css";
 import { MdArrowBackIos } from "react-icons/md";
-import Header from "../header/Header";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -10,17 +10,17 @@ const ProductDetails = () => {
 
   return (
     <>
-      <Header />
       <div className={styles.container}>
         {productsList.filter((item) => item.id === numberId).map((item) => (
           <div key={item.id}>
             {console.log(item)}
             <div className={styles.back}>
-              <Link to="/" >
+              <Link to="/" className={styles.back_link}  >
                 <MdArrowBackIos className={styles.back_btn} />
+                <p className={styles.back_text}>Voltar</p>
               </Link>
             </div>
-            <h1 className={styles.name}>{item.itemName}</h1>
+            <h2 className={styles.name}>{item.itemName}</h2>
             <div className={styles.text}>
               <div className={styles.text_action}>
                 <p className={styles.text_type}>Escolha sua carne</p>
@@ -28,12 +28,24 @@ const ProductDetails = () => {
               </div>
               <p className={styles.green_text}>Obrigatorio</p>
             </div>
-            {item.itemOptionPrice.map((type, index) => (
-              <div key={index} className={styles.option_price}>
-                <p className={styles.type}>{type.option}</p>
-                <p className={styles.price}>{type.price.toFixed(2).replace('.', ',')}</p>
-              </div>
-            ))}
+            <div className={styles.choice_cover}>
+              {item.itemOptionPrice.map((type, index) => (
+                <div key={index} className={styles.choice}>
+                  <div className={styles.option_price}>
+                    <p className={styles.type}>{type.option}</p>
+                    <p className={styles.price}>{type.price.toFixed(2).replace('.', ',')}</p>
+                  </div>
+                  <div className={styles.btn_choice}>
+                    <button >
+                      <AiOutlineMinus className={styles.btn_choice_minus} />
+                    </button>
+                    <button>
+                      <AiOutlinePlus className={styles.btn_choice_plus} />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div >

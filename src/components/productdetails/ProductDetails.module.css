@@ -5,12 +5,22 @@
 .back {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   padding: 50px;
+}
+
+.back_link {
+  display: flex;
+  align-items: center;
 }
 
 .back_btn {
   height: 50px;
   width: 50px;
+}
+
+.back_text {
+  display: none;
 }
 
 .name {
@@ -48,19 +58,89 @@
 
 .green_text {
   padding: 10px;
+  margin-left: 10px;
   border-radius: 10px;
   color: var(--color-light-grey);
   background-color: var(--color-green);
 }
 
-.option_price {
-  padding-top: 50px;
+.choice_cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  max-width: 100%;
+  border: 3px solid var(--color-border);
+  border-radius: 10px;
 }
 
-/* .type {} */
+.choice {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  width: 100%;
+  border-bottom: 3px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.option_price {
+  display: flex;
+  flex-direction: column;
+}
+
+.type {
+  text-transform: uppercase;
+}
+
+.price {
+  color: var(--color-green);
+}
+
+.btn_choice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  gap: 50px;
+}
+
+.btn_choice button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn_choice_minus,
+.btn_choice_plus {
+  height: 2rem;
+  width: 2rem;
+
+}
+
+.btn_choice_minus {
+  color: var(--color-red);
+}
+
+.btn_choice_plus {
+  color: var(--color-green);
+}
 
 @media (max-width: 56.25rem) {
   .name {
     bottom: 30px;
+  }
+
+  .back_text {
+    display: block;
+  }
+}
+
+@media (max-width: 30rem) {
+  .choice {
+    padding: 40px 10px;
+  }
+
+  .btn_choice {
+    gap: 15px;
   }
 }
