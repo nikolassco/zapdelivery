@@ -6,7 +6,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 50px;
+  padding: 15px;
 }
 
 .back_link {
@@ -25,7 +25,7 @@
 
 .name {
   position: relative;
-  bottom: 100px;
+  bottom: 60px;
   padding: 0 20px;
   text-transform: uppercase;
   z-index: -1;
@@ -127,7 +127,7 @@
 
 @media (max-width: 56.25rem) {
   .name {
-    bottom: 30px;
+    bottom: 20px;
   }
 
   .back_text {
