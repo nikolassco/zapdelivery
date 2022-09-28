@@ -1,9 +1,9 @@
 import styles from './Navbar.module.css';
 import { Link } from 'react-scroll';
-import { usePedidoContext } from '../../hooks/usePedidoContext';
+import { usePurchaseContext } from '../../hooks/usePurchaseContext';
 
 const Navbar = () => {
-  const { setSearchTerm } = usePedidoContext();
+  const { setSearchTerm } = usePurchaseContext();
 
   return (
     <div className={styles.navbar}>

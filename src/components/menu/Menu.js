@@ -2,11 +2,11 @@ import React from 'react';
 import styles from "./Menu.module.css";
 import ProductCover from '../productcover/ProductCover';
 import { productsList } from '../../data/products/products';
-import { usePedidoContext } from '../../hooks/usePedidoContext';
+import { usePurchaseContext } from '../../hooks/usePurchaseContext';
 // chamar os itens pra preencher category
 
 const Menu = () => {
-  const { searchTerm } = usePedidoContext();
+  const { searchTerm } = usePurchaseContext();
 
   return (
     <div className={styles.menu}>

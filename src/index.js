@@ -4,13 +4,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductDetails from './components/productdetails/ProductDetails';
-import { PedidoContextProvider } from './context/PedidoContext';
 import ScrollToTop from './ScrollToTop';
+import { PurchaseContextProvider } from './context/PurchaseContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PedidoContextProvider>
+    <PurchaseContextProvider>
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
@@ -18,7 +18,7 @@ root.render(
           <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
       </BrowserRouter>
-    </PedidoContextProvider>
+    </PurchaseContextProvider>
   </React.StrictMode>
 );
 

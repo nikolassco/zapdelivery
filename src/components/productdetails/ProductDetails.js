@@ -3,17 +3,20 @@ import { productsList } from "../../data/products/products";
 import styles from "./ProductDetails.module.css";
 import { MdArrowBackIos } from "react-icons/md";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { usePurchaseContext } from '../../hooks/usePurchaseContext';
+
 
 const ProductDetails = () => {
   const { id } = useParams();
   const numberId = Number.parseInt(id, 10);
+  const { handleAddItem } = usePurchaseContext();
+
 
   return (
     <>
       <div className={styles.container}>
         {productsList.filter((item) => item.id === numberId).map((item) => (
           <div key={item.id}>
-            {console.log(item)}
             <div className={styles.back}>
               <Link to="/" className={styles.back_link}  >
                 <MdArrowBackIos className={styles.back_btn} />
@@ -36,10 +39,10 @@ const ProductDetails = () => {
                     <p className={styles.price}>{type.price.toFixed(2).replace('.', ',')}</p>
                   </div>
                   <div className={styles.btn_choice}>
-                    <button >
+                    <button>
                       <AiOutlineMinus className={styles.btn_choice_minus} />
                     </button>
-                    <button>
+                    <button onClick={() => handleAddItem(item, type)}>
                       <AiOutlinePlus className={styles.btn_choice_plus} />
                     </button>
                   </div>
