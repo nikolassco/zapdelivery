@@ -5,11 +5,10 @@ import { MdArrowBackIos } from "react-icons/md";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { usePurchaseContext } from '../../hooks/usePurchaseContext';
 
-
 const ProductDetails = () => {
   const { id } = useParams();
   const numberId = Number.parseInt(id, 10);
-  const { handleAddItem } = usePurchaseContext();
+  const { handleAddItem, qtd, setQtd, shopCart } = usePurchaseContext();
 
 
   return (
@@ -29,14 +28,14 @@ const ProductDetails = () => {
                 <p className={styles.text_type}>Escolha sua carne</p>
                 <p className={styles.text_info}><em>Escolha até uma opção</em></p>
               </div>
-              <p className={styles.green_text}>Obrigatorio</p>
+              <p className={styles.mandatory_text}>Obrigatorio</p>
             </div>
             <div className={styles.choice_cover}>
               {item.itemOptionPrice.map((type, index) => (
                 <div key={index} className={styles.choice}>
                   <div className={styles.option_price}>
                     <p className={styles.type}>{type.option}</p>
-                    <p className={styles.price}>{type.price.toFixed(2).replace('.', ',')}</p>
+                    <p className={styles.price}>+ R${type.price.toFixed(2).replace('.', ',')}</p>
                   </div>
                   <div className={styles.btn_choice}>
                     <button>
@@ -48,6 +47,21 @@ const ProductDetails = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className={styles.add_type_item}>
+              <div className={styles.btn_choice}>
+                <button onClick={() => setQtd(qtd - 1)}>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <span>{qtd}</span>
+                <button onClick={() => setQtd(qtd + 1)}>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+              <div className={styles.btn_add_item}>
+                <p>{shopCart[0]?.price.toFixed(2).replace('.', ',')}</p>
+                <button>Adicionar</button>
+              </div>
             </div>
           </div>
         ))}
