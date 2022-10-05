@@ -65,7 +65,295 @@ const ProductDetails = () => {
             </div>
           </div>
         ))}
-      </div >
+        <div className={styles.additional}>
+          <div className={styles.text}>
+            <div className={styles.text_action}>
+              <p className={styles.text_type}>Turbine seu pedido</p>
+              <p className={styles.text_info}><em>Escolha até 10 opções</em></p>
+            </div>
+            <p className={styles.mandatory_text}>Opcional</p>
+          </div>
+          <div className={styles.choice_cover}>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Cheddar Cremoso</p>
+                <p className={styles.price}>+ R$3,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Cheddar Fatiado</p>
+                <p className={styles.price}>+ R$3,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Catupiry</p>
+                <p className={styles.price}>+ R$3,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Hamburguer Tradicional</p>
+                <p className={styles.price}>+ R$2,50</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Hamburguer Picanha</p>
+                <p className={styles.price}>+ R$4,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Hamburguer Caseiro</p>
+                <p className={styles.price}>+ R$5,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Bacon</p>
+                <p className={styles.price}>+ R$3,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Bacon Gourmet</p>
+                <p className={styles.price}>+ R$4,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Calabresa</p>
+                <p className={styles.price}>+ R$3,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Ovo Frito</p>
+                <p className={styles.price}>+ R$1,50</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Banana Frita</p>
+                <p className={styles.price}>+ R$2,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Frango Desfiado</p>
+                <p className={styles.price}>+ R$3,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>American Burguer</p>
+                <p className={styles.price}>+ R$1,50</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Mussarela</p>
+                <p className={styles.price}>+ R$1,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Salsicha</p>
+                <p className={styles.price}>+ R$1,50</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Ovo de Codorna</p>
+                <p className={styles.price}>+ R$0,75</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.extra}>
+          <div className={styles.text}>
+            <div className={styles.text_action}>
+              <p className={styles.text_type}>Molhos Extras</p>
+              <p className={styles.text_info}><em>Escolha até 10 opções</em></p>
+            </div>
+            <p className={styles.mandatory_text}>Opcional</p>
+          </div>
+          <div className={styles.choice_cover}>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>Maionese Caseira</p>
+                <p className={styles.price}>+ R$1,00</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>2 Sachês de Catchup</p>
+                <p className={styles.price}>+ R$0,50</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+            <div className={styles.choice}>
+              <div className={styles.option_price}>
+                <p className={styles.type}>2 Sachês de Catchup</p>
+                <p className={styles.price}>+ R$0,75</p>
+              </div>
+              <div className={styles.btn_choice}>
+                <button>
+                  <AiOutlineMinus className={styles.btn_choice_minus} />
+                </button>
+                <button>
+                  <AiOutlinePlus className={styles.btn_choice_plus} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

@@ -166,6 +166,10 @@
   top: 1px;
 }
 
+.additional {
+  margin-top: 100px;
+}
+
 @media (max-width: 56.25rem) {
   .name {
     bottom: 20px;
